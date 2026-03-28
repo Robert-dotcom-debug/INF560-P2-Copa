@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+}
+
+}
