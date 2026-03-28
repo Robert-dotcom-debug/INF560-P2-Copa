@@ -1,0 +1,239 @@
+:root {
+    --primary: #00c6ff;
+    --secondary: #0072ff;
+    --dark: #0f172a;
+    --glass: rgba(255,255,255,0.1);
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#e0f7ff, #ffffff);
+}
+
+/* HEADER FIJO */
+.header {
+    position: fixed;   /* 🔥 ahora siempre visible */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    backdrop-filter: blur(12px);
+    background: rgba(15, 23, 42, 0.7);
+
+    transition: all 0.3s ease;
+}
+
+/* EFECTO AL HACER SCROLL */
+.header.scrolled {
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 🔥 CLAVE */
+    padding: 1rem 2rem;
+}
+
+.logo {
+    color: white;
+}
+
+.section {
+    color: white;
+}
+
+.reveal text {
+    color: white;
+}
+
+/* LINKS EN FILA */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+/* EVITA QUE SE APILEN */
+.nav-links li {
+    display: inline-block;
+}
+
+/* LINKS */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+/* EFECTO HOVER PRO */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00c6ff;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* HERO PARALLAX */
+.hero {
+    height: 100vh;
+    background: url('URL_HERO') center/cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* BOTÓN MODERNO */
+.btn-explore {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+/* HOVER */
+.btn-explore:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* FLECHA ANIMADA */
+.arrow {
+    transition: transform 0.3s;
+}
+
+.btn-explore:hover .arrow {
+    transform: translateY(5px);
+}
+
+.hero-content {
+    background: var(--glass);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* SECCIONES */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#experiencia h2 {
+    color: white;
+}
+
+.dark {
+    background: var(--dark);
+    color: black;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.card {
+    background: rgb(200, 238, 250);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+#video h2 {
+    color: white;
+}
+
+#ubicacion h2 {
+    color: black;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.stat h3 {
+    font-size: 2rem;
+    color: var(--secondary);
+}
+
+/* CARRUSEL */
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.carousel-item {
+    width: 100%;
+    display: none;
+    border-radius: 15px;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+#galeria h2 {
+    color: black;
+}
+
+/* FORM */
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    gap: 10px;
+}
+
+/* REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.uyuni-bg {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+    url('https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/656345832_122315795276175668_1819750317296530935_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=dd6889&_nc_ohc=f6TgbL5ct2sQ7kNvwF5cQ92&_nc_oc=AdrDzNAqxbRdKJH2i5i2WjDsXzZ-nTDQXNE5_y6cIpZqLRevUi8TzOYcbwEvMSJbg8xyKRo2MJ5ahjuEIa3EITpH&_nc_zt=23&_nc_ht=scontent.flpb1-1.fna&_nc_gid=6GYmPk5Ta2bUvc5D-7veEw&_nc_ss=7a32e&oh=00_Afw4yKl6WURszcrpUsmVqVNCyq3J3jDmJQQuVv6TqEDeMw&oe=69CA4C3D') center/cover no-repeat;
+}
+#contacto h2 {
+    color: white;
+}
