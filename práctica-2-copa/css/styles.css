@@ -205,6 +205,10 @@ body {
     display: block;
 }
 
+#galeria h2 {
+    color: black;
+}
+
 /* FORM */
 .form {
     display: flex;
